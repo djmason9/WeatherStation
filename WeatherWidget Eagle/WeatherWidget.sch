@@ -7982,7 +7982,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 </library>
 <library name="bitcows-esp32">
 <packages>
-<package name="ESP-WROOM-03">
+<package name="ESP-WROOM-03-HOLES">
 <wire x1="-10.3" y1="-9" x2="-10.3" y2="9" width="0" layer="51"/>
 <wire x1="-10.3" y1="9" x2="9.2" y2="9" width="0" layer="51"/>
 <wire x1="9.2" y1="9" x2="15.2" y2="9" width="0" layer="51"/>
@@ -8409,7 +8409,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <smd name="36" x="5.16" y="-9" dx="0.9" dy="1.5" layer="1"/>
 <smd name="37" x="6.43" y="-9" dx="0.9" dy="1.5" layer="1"/>
 <smd name="38" x="7.7" y="-9" dx="0.9" dy="1.5" layer="1"/>
-<smd name="GND" x="-0.003809375" y="-2.528571875" dx="0.9144" dy="0.9144" layer="1"/>
 <wire x1="-10.427" y1="6.35" x2="-10.427" y2="9.127" width="0.2032" layer="21"/>
 <wire x1="-10.427" y1="9.127" x2="-9.4" y2="9.127" width="0.2032" layer="21"/>
 <wire x1="-10.427" y1="-6.35" x2="-10.427" y2="-9.127" width="0.2032" layer="21"/>
@@ -8419,12 +8418,12 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="8.311" y1="9.127" x2="15.327" y2="9.127" width="0.2032" layer="21"/>
 <wire x1="8.311" y1="-9.127" x2="15.327" y2="-9.127" width="0.2032" layer="21"/>
 <wire x1="15.327" y1="9.127" x2="15.327" y2="-9.127" width="0.2032" layer="21"/>
-<pad name="P$1" x="-2.54" y="2.54" drill="0.4" shape="square"/>
+<pad name="GND" x="-2.54" y="2.54" drill="0.4" shape="square"/>
 <pad name="P$2" x="-2.54" y="1.27" drill="0.4" shape="square"/>
-<pad name="P$3" x="-2.54" y="-2.54" drill="0.4" shape="square"/>
+<pad name="GND3" x="-2.54" y="-2.54" drill="0.4" shape="square"/>
 <pad name="P$4" x="-2.54" y="-1.27" drill="0.4" shape="square"/>
-<pad name="P$6" x="2.54" y="-2.54" drill="0.4" shape="square"/>
-<pad name="P$7" x="2.54" y="2.54" drill="0.4" shape="square"/>
+<pad name="GND4" x="2.54" y="-2.54" drill="0.4" shape="square"/>
+<pad name="GND1" x="2.54" y="2.54" drill="0.4" shape="square"/>
 <pad name="P$8" x="2.54" y="-1.27" drill="0.4" shape="square"/>
 <pad name="P$9" x="2.54" y="1.27" drill="0.4" shape="square"/>
 <pad name="P$11" x="-1.27" y="2.54" drill="0.4" shape="square"/>
@@ -8439,18 +8438,11 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <pad name="P$22" x="1.27" y="0" drill="0.4" shape="square"/>
 <pad name="P$24" x="0" y="-1.27" drill="0.4" shape="square"/>
 <pad name="P$25" x="1.27" y="-1.27" drill="0.4" shape="square"/>
-<smd name="GND1" x="0" y="-0.635" dx="5.969" dy="0.3556" layer="1"/>
-<pad name="P$23" x="0" y="0" drill="0.4" shape="square"/>
-<smd name="GND15" x="0" y="1.905" dx="5.969" dy="0.3556" layer="1"/>
-<smd name="GND16" x="0" y="0.635" dx="5.969" dy="0.3556" layer="1"/>
-<smd name="GND36" x="-1.905" y="0.0215875" dx="0.3556" dy="5.969" layer="1"/>
-<smd name="GND37" x="-0.635" y="0" dx="0.3556" dy="5.969" layer="1"/>
-<smd name="GND38" x="0.635" y="0" dx="0.3556" dy="5.969" layer="1"/>
-<smd name="GND39" x="1.905" y="0" dx="0.3556" dy="5.969" layer="1"/>
-<smd name="GND01" x="-2.53085625" y="-0.002665625" dx="0.9144" dy="0.9144" layer="1"/>
-<smd name="GND02" x="2.52196875" y="-0.000509375" dx="0.9144" dy="0.9144" layer="1"/>
-<smd name="GND03" x="-0.002284375" y="2.525521875" dx="0.9144" dy="0.9144" layer="1"/>
-<smd name="GND04" x="0.01371875" y="-1.907034375" dx="5.969" dy="0.3556" layer="1"/>
+<pad name="GND2" x="0" y="0" drill="0.4" shape="square"/>
+<pad name="P$10" x="0" y="2.54" drill="0.4" shape="square"/>
+<pad name="P$12" x="2.54" y="0" drill="0.4" shape="square"/>
+<pad name="P$15" x="0" y="-2.54" drill="0.4" shape="square"/>
+<pad name="P$5" x="-2.54" y="0" drill="0.4" shape="square"/>
 </package>
 </packages>
 <symbols>
@@ -8508,14 +8500,14 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <gate name="G$1" symbol="ESP-WROOM-03" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="ESP-WROOM-03">
+<device name="" package="ESP-WROOM-03-HOLES">
 <connects>
 <connect gate="G$1" pin="3V3" pad="2"/>
 <connect gate="G$1" pin="EN" pad="3"/>
-<connect gate="G$1" pin="GND" pad="GND GND01 GND02 GND03"/>
-<connect gate="G$1" pin="GND@1" pad="1"/>
-<connect gate="G$1" pin="GND@15" pad="15"/>
-<connect gate="G$1" pin="GND@38" pad="38"/>
+<connect gate="G$1" pin="GND" pad="1 GND1 GND2 GND3 GND4"/>
+<connect gate="G$1" pin="GND@1" pad="15"/>
+<connect gate="G$1" pin="GND@15" pad="38"/>
+<connect gate="G$1" pin="GND@38" pad="GND"/>
 <connect gate="G$1" pin="IO0" pad="25"/>
 <connect gate="G$1" pin="IO12" pad="14"/>
 <connect gate="G$1" pin="IO13" pad="16"/>
@@ -8612,7 +8604,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 </package>
 </packages>
 <packages3d>
-<package3d name="128X64OLED" urn="urn:adsk.eagle:package:5227687/1" type="box" library_version="1">
+<package3d name="128X64OLED" urn="urn:adsk.eagle:package:5227687/2" type="model" library_version="1" library_locally_modified="yes">
 <packageinstances>
 <packageinstance name="128X64OLED"/>
 </packageinstances>
@@ -8639,7 +8631,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="128X64OLED" urn="urn:adsk.eagle:component:5227688/1" prefix="128X64" library_version="1">
+<deviceset name="128X64OLED" urn="urn:adsk.eagle:component:5227688/1" locally_modified="yes" prefix="128X64" library_version="1" library_locally_modified="yes">
 <gates>
 <gate name="G$1" symbol="128X64OLED" x="0" y="0"/>
 </gates>
@@ -8652,7 +8644,7 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5227687/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5227687/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -8808,7 +8800,7 @@ USB_Mini-B
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="220"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="128X1" library="128x64oled" library_urn="urn:adsk.eagle:library:5227684" deviceset="128X64OLED" device="" package3d_urn="urn:adsk.eagle:package:5227687/1"/>
+<part name="128X1" library="128x64oled" library_urn="urn:adsk.eagle:library:5227684" deviceset="128X64OLED" device="" package3d_urn="urn:adsk.eagle:package:5227687/2"/>
 <part name="SW1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SPST_TACT" device="-EVQQ2" package3d_urn="urn:adsk.eagle:package:6240643/1"/>
 <part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="220"/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="USB_MINI-B" device="_SMT" package3d_urn="urn:adsk.eagle:package:38244/1"/>
